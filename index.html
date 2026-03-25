@@ -1,11 +1,599 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ember & Crust Pizza</title>
+    <meta name="description"
+        content="Hot & fresh pizza delivered to you. Premium ingredients, fast delivery, and unbeatable taste." />
+
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    Hello world
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Top Nav -->
+    <header class="site-header" data-header>
+        <nav class="nav container" aria-label="Primary">
+            <a class="brand" href="#top" aria-label="Ember & Crust Home">
+                <span class="brand__mark" aria-hidden="true">🔥</span>
+                <span class="brand__name">Ember & Crust</span>
+            </a>
+
+            <button class="nav__toggle" type="button" data-nav-toggle aria-label="Open menu">
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
+
+            <div class="nav__links" data-nav-links>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#offers">Offers</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="nav__actions">
+                <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode">
+                    <span class="icon-btn__icon" aria-hidden="true">🌙</span>
+                </button>
+
+                <button class="cart-btn" type="button" data-cart-open aria-label="Open cart">
+                    <span class="cart-btn__icon" aria-hidden="true">🛒</span>
+                    <span class="cart-btn__label">Cart</span>
+                    <span class="cart-badge" data-cart-badge aria-label="Items in cart">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- Hero -->
+        <section class="hero" id="top">
+            <div class="hero__bg" aria-hidden="true"></div>
+            <div class="container hero__content">
+                <div class="hero__copy">
+                    <div class="pill pill--warm" data-reveal>
+                        <span class="pill__dot" aria-hidden="true"></span>
+                        <span>Stone-baked • Ready in minutes</span>
+                    </div>
+
+                    <h1 class="hero__title" data-reveal>
+                        Hot &amp; Fresh Pizza Delivered to You
+                    </h1>
+
+                    <p class="hero__tagline" data-reveal>
+                        Crafted with authentic ingredients, slow-fermented dough, and a smoky oven finish. Order now
+                        and taste the difference.
+                    </p>
+
+                    <div class="hero__cta" data-reveal>
+                        <a class="btn btn--primary" href="#menu">Order Now</a>
+                        <a class="btn btn--ghost" href="#menu">View Menu</a>
+                    </div>
+
+                    <div class="hero__meta" data-reveal>
+                        <div class="meta-card">
+                            <span class="meta-card__icon" aria-hidden="true">⏱️</span>
+                            <span class="meta-card__value">20–30 min</span>
+                            <span class="meta-card__label">Fast Delivery</span>
+                        </div>
+                        <div class="meta-card">
+                            <span class="meta-card__icon" aria-hidden="true">⭐</span>
+                            <span class="meta-card__value">4.8/5</span>
+                            <span class="meta-card__label">Top Rated</span>
+                        </div>
+                        <div class="meta-card meta-card--hide-sm">
+                            <span class="meta-card__icon" aria-hidden="true">🌿</span>
+                            <span class="meta-card__value">Real Ingredients</span>
+                            <span class="meta-card__label">No Shortcuts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__media" data-reveal>
+                    <div class="pizza-card" role="img" aria-label="A fresh pizza close-up">
+                        <img class="pizza-card__img"
+                            src="https://images.unsplash.com/photo-1548365328-8bdb1f7a7e0f?auto=format&fit=crop&w=1200&q=80"
+                            alt="Freshly baked pizza" loading="lazy" />
+                        <div class="pizza-card__glow" aria-hidden="true"></div>
+                        <div class="pizza-card__badge">
+                            <span class="pizza-card__badgeTop">Today’s Special</span>
+                            <span class="pizza-card__badgeBottom">Smoky Pepperoni</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section__head">
+                    <p class="eyebrow" data-reveal>Our Story</p>
+                    <h2 class="h2" data-reveal>Authentic pizza, crafted like family</h2>
+                    <p class="lead" data-reveal>
+                        Ember &amp; Crust is built on one promise: hot, delicious pizza with ingredients you can
+                        pronounce and taste. From slow-fermented dough to hand-tossed sauce, every pie is made to
+                        satisfy.
+                    </p>
+                </div>
+
+                <div class="grid grid--2">
+                    <div class="card card--soft about-card" data-reveal>
+                        <div class="about-card__points">
+                            <div class="point">
+                                <span class="point__icon" aria-hidden="true">🥖</span>
+                                <div>
+                                    <h3 class="h3">Premium dough</h3>
+                                    <p>Slow fermentation for a light, airy crust and a perfectly crisp bite.</p>
+                                </div>
+                            </div>
+                            <div class="point">
+                                <span class="point__icon" aria-hidden="true">🧀</span>
+                                <div>
+                                    <h3 class="h3">Quality cheese</h3>
+                                    <p>Real mozzarella with a melty stretch and rich flavor.</p>
+                                </div>
+                            </div>
+                            <div class="point">
+                                <span class="point__icon" aria-hidden="true">🍅</span>
+                                <div>
+                                    <h3 class="h3">Authentic sauce</h3>
+                                    <p>House-made tomato base with herbs and slow-cooked depth.</p>
+                                </div>
+                            </div>
+                            <div class="point">
+                                <span class="point__icon" aria-hidden="true">🔥</span>
+                                <div>
+                                    <h3 class="h3">Oven-fired finish</h3>
+                                    <p>Smoky char from a high-heat stone oven for that unmistakable aroma.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card about-media" data-reveal>
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+                            alt="Chefs cooking in a kitchen" loading="lazy" />
+                        <div class="about-media__overlay">
+                            <div class="kpi">
+                                <span class="kpi__value">10+ yrs</span>
+                                <span class="kpi__label">Baking heritage</span>
+                            </div>
+                            <div class="kpi">
+                                <span class="kpi__value">Daily</span>
+                                <span class="kpi__label">Fresh prep</span>
+                            </div>
+                            <div class="kpi">
+                                <span class="kpi__value">Local</span>
+                                <span class="kpi__label">Partnered farms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <section class="section section--alt" id="menu">
+            <div class="container">
+                <div class="section__head">
+                    <p class="eyebrow" data-reveal>Menu</p>
+                    <h2 class="h2" data-reveal>Pick your perfect slice</h2>
+                    <p class="lead" data-reveal>
+                        Explore our categories and add your favorites to the cart. Prices shown are per pizza.
+                    </p>
+                </div>
+
+                <div class="filters" role="tablist" aria-label="Pizza categories">
+                    <button class="chip chip--active" type="button" data-filter="all" role="tab" aria-selected="true">
+                        All
+                    </button>
+                    <button class="chip" type="button" data-filter="veg" role="tab" aria-selected="false">Veg</button>
+                    <button class="chip" type="button" data-filter="nonveg" role="tab" aria-selected="false">
+                        Non-Veg
+                    </button>
+                    <button class="chip" type="button" data-filter="special" role="tab" aria-selected="false">
+                        Special
+                    </button>
+                    <button class="chip" type="button" data-filter="combos" role="tab" aria-selected="false">
+                        Combos
+                    </button>
+                </div>
+
+                <div class="menu-grid" data-menu-grid>
+                    <!-- Cards inserted by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Offers -->
+        <section class="section" id="offers">
+            <div class="container">
+                <div class="section__head">
+                    <p class="eyebrow" data-reveal>Special Offers</p>
+                    <h2 class="h2" data-reveal>Limited-time deals you’ll love</h2>
+                    <p class="lead" data-reveal>Grab discounts and combo bundles while they last.</p>
+                </div>
+
+                <div class="offer-grid">
+                    <div class="offer-banner offer-banner--hot" data-reveal>
+                        <div class="offer-banner__content">
+                            <h3 class="h3">🔥 2 for 1 Weeknight Combo</h3>
+                            <p>Buy one Margherita, get the second at 50% off.</p>
+                        </div>
+                        <div class="offer-banner__cta">
+                            <span class="offer-banner__tag">Ends Sunday</span>
+                            <a class="btn btn--primary btn--sm" href="#menu">Add Combo</a>
+                        </div>
+                    </div>
+
+                    <div class="offer-banner offer-banner--ember" data-reveal>
+                        <div class="offer-banner__content">
+                            <h3 class="h3">🍕 Family Feast</h3>
+                            <p>4 pizzas + 2 sides at a bundle price. Feeds the whole crew.</p>
+                        </div>
+                        <div class="offer-banner__cta">
+                            <span class="offer-banner__tag">Best Value</span>
+                            <a class="btn btn--ghost btn--sm" href="#menu">View Deals</a>
+                        </div>
+                    </div>
+
+                    <div class="offer-banner offer-banner--brown" data-reveal>
+                        <div class="offer-banner__content">
+                            <h3 class="h3">⚡ Midnight Pepperoni</h3>
+                            <p>Limited batch every night. Smoky, spicy, irresistibly crispy.</p>
+                        </div>
+                        <div class="offer-banner__cta">
+                            <span class="offer-banner__tag">Limited Batch</span>
+                            <a class="btn btn--primary btn--sm" href="#menu">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="section section--why" id="why">
+            <div class="container">
+                <div class="section__head">
+                    <p class="eyebrow" data-reveal>Why Choose Us</p>
+                    <h2 class="h2" data-reveal>Premium taste, every single time</h2>
+                    <p class="lead" data-reveal">Made fresh, delivered fast, and crafted for real flavor.</p>
+                </div>
+
+                <div class="feature-grid">
+                    <div class="feature" data-reveal>
+                        <div class="feature__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round">
+                                <path d="M12 2s4 4 4 8-4 12-4 12-4-8-4-12 4-8 4-8Z" />
+                            </svg>
+                        </div>
+                        <h3 class="h3">Fresh Ingredients</h3>
+                        <p>Handpicked produce and quality cheeses for that authentic bite.</p>
+                    </div>
+                    <div class="feature" data-reveal>
+                        <div class="feature__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round">
+                                <path d="M12 2v4" />
+                                <path d="M18.5 6.5l-2.8 2.8" />
+                                <path d="M22 12h-4" />
+                                <path d="M18.5 17.5l-2.8-2.8" />
+                                <path d="M12 22v-4" />
+                                <path d="M5.5 17.5l2.8-2.8" />
+                                <path d="M2 12h4" />
+                                <path d="M5.5 6.5l2.8 2.8" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </div>
+                        <h3 class="h3">Fast Delivery</h3>
+                        <p>Hot &amp; ready—timed for freshness from oven to door.</p>
+                    </div>
+                    <div class="feature" data-reveal>
+                        <div class="feature__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round">
+                                <path d="M12 17.5 9.5 20l-6-2 1-6 6-2 2.5-2.5" />
+                                <path d="M12 17.5 14.5 20l6-2-1-6-6-2-2.5-2.5" />
+                                <path d="M12 2l1.5 6L12 10l-1.5-2L12 2Z" />
+                            </svg>
+                        </div>
+                        <h3 class="h3">Best Taste</h3>
+                        <p>Balancing spice, herbs, and cheese for a crave-worthy finish.</p>
+                    </div>
+                    <div class="feature" data-reveal>
+                        <div class="feature__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round">
+                                <path d="M20 6 9 17l-5-5" />
+                                <path d="M22 6H12" />
+                                <path d="M12 6V4a2 2 0 0 1 2-2h10v4Z" />
+                            </svg>
+                        </div>
+                        <h3 class="h3">Affordable Price</h3>
+                        <p>Premium quality without the premium price—always.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section section--alt" id="testimonials">
+            <div class="container">
+                <div class="section__head">
+                    <p class="eyebrow" data-reveal>Testimonials</p>
+                    <h2 class="h2" data-reveal>Loved by pizza people</h2>
+                    <p class="lead" data-reveal">Real reviews from our regulars and first-timers.</p>
+                </div>
+
+                <div class="test-grid" data-reveal>
+                    <article class="review-card">
+                        <div class="review-card__top">
+                            <img class="avatar" src="https://i.pravatar.cc/150?img=11" alt="A customer avatar"
+                                loading="lazy" />
+                            <div>
+                                <h3 class="h3 review-card__name">Aisha M.</h3>
+                                <div class="stars" aria-label="Rating 5 out of 5">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-card__text">
+                            The crust is unreal—crispy outside, soft inside. Pepperoni tasted fresh and the delivery was
+                            faster than expected.
+                        </p>
+                        <p class="review-card__meta">Ordered: Smoky Pepperoni • Today</p>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-card__top">
+                            <img class="avatar" src="https://i.pravatar.cc/150?img=32" alt="A customer avatar"
+                                loading="lazy" />
+                            <div>
+                                <h3 class="h3 review-card__name">Daniel R.</h3>
+                                <div class="stars" aria-label="Rating 4.5 out of 5">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span
+                                        class="muted-star">★</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-card__text">
+                            Veg pizzas are packed with flavor. The garlic dip is a must. Great value and the website is
+                            super easy to use.
+                        </p>
+                        <p class="review-card__meta">Ordered: Garden Veggie • 2 days ago</p>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-card__top">
+                            <img class="avatar" src="https://i.pravatar.cc/150?img=45" alt="A customer avatar"
+                                loading="lazy" />
+                            <div>
+                                <h3 class="h3 review-card__name">Priya S.</h3>
+                                <div class="stars" aria-label="Rating 5 out of 5">
+                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-card__text">
+                            Special combo was perfect for our family night. Everything arrived hot, and the portions
+                            were spot on.
+                        </p>
+                        <p class="review-card__meta">Ordered: Family Feast • Last week</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section section--contact" id="contact">
+            <div class="container">
+                <div class="section__head">
+                    <p class="eyebrow" data-reveal>Contact</p>
+                    <h2 class="h2" data-reveal>We’re ready when you are</h2>
+                    <p class="lead" data-reveal>Call us, email us, or send a message—our team responds quickly.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="card contact-card" data-reveal>
+                        <div class="contact-card__info">
+                            <div class="contact-row">
+                                <span class="contact-row__icon" aria-hidden="true">📍</span>
+                                <div>
+                                    <p class="contact-row__label">Address</p>
+                                    <p class="contact-row__value">221 Ember Street, Downtown, TX 75001</p>
+                                </div>
+                            </div>
+                            <div class="contact-row">
+                                <span class="contact-row__icon" aria-hidden="true">📞</span>
+                                <div>
+                                    <p class="contact-row__label">Phone</p>
+                                    <p class="contact-row__value">
+                                        <a href="tel:+12145550199" class="link">+1 (214) 555-0199</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact-row">
+                                <span class="contact-row__icon" aria-hidden="true">✉️</span>
+                                <div>
+                                    <p class="contact-row__label">Email</p>
+                                    <p class="contact-row__value">
+                                        <a href="mailto:hello@embercrust.com" class="link">hello@embercrust.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="map-wrap" aria-label="Google map">
+                            <iframe src="https://www.google.com/maps?q=Downtown%20Dallas%20TX&output=embed"
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    <form class="card contact-form" data-reveal id="contactForm">
+                        <div class="form-head">
+                            <h3 class="h3">Send us a message</h3>
+                            <p class="small">We’ll get back to you within 24 hours.</p>
+                        </div>
+
+                        <div class="form-grid">
+                            <label>
+                                <span class="label">Full Name</span>
+                                <input name="name" type="text" autocomplete="name" placeholder="Your name" required />
+                            </label>
+
+                            <label>
+                                <span class="label">Phone</span>
+                                <input name="phone" type="tel" autocomplete="tel" placeholder="+1 555 0123" required />
+                            </label>
+
+                            <label>
+                                <span class="label">Email</span>
+                                <input name="email" type="email" autocomplete="email" placeholder="you@example.com"
+                                    required />
+                            </label>
+
+                            <label>
+                                <span class="label">Topic</span>
+                                <select name="topic" required>
+                                    <option value="" selected disabled>Select a topic</option>
+                                    <option>Order Status</option>
+                                    <option>Bulk Catering</option>
+                                    <option>Feedback</option>
+                                    <option>Other</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <label class="mt-12">
+                            <span class="label">Message</span>
+                            <textarea name="message" rows="5" placeholder="How can we help?" required></textarea>
+                        </label>
+
+                        <div class="form-actions">
+                            <button class="btn btn--primary" type="submit">Submit</button>
+                            <button class="btn btn--ghost" type="reset">Clear</button>
+                        </div>
+                        <p class="form-note" id="formNote" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer-col">
+                <div class="footer-brand">
+                    <span class="brand__mark" aria-hidden="true">🔥</span>
+                    <span>Ember &amp; Crust</span>
+                </div>
+                <p class="small footer-muted">
+                    Hot &amp; fresh pizza delivered fast. Premium ingredients. Real flavor.
+                </p>
+
+                <div class="socials" aria-label="Social media links">
+                    <a href="#" class="social" aria-label="Instagram">IG</a>
+                    <a href="#" class="social" aria-label="Facebook">FB</a>
+                    <a href="#" class="social" aria-label="Twitter">TW</a>
+                    <a href="#" class="social" aria-label="YouTube">YT</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Quick Links</h4>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#offers">Offers</a>
+                    <a href="#testimonials">Reviews</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Opening Hours</h4>
+                <div class="hours">
+                    <div class="hours-row"><span>Mon–Thu</span><span>11:00 AM – 10:00 PM</span></div>
+                    <div class="hours-row"><span>Fri</span><span>11:00 AM – 12:00 AM</span></div>
+                    <div class="hours-row"><span>Sat</span><span>12:00 PM – 12:00 AM</span></div>
+                    <div class="hours-row"><span>Sun</span><span>12:00 PM – 9:00 PM</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom container">
+            <span>© <span id="year"></span> Ember &amp; Crust Pizza. All rights reserved.</span>
+            <span class="footer-muted">Built for a premium, warm pizza experience.</span>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <aside class="cart-drawer" data-cart-drawer aria-hidden="true">
+        <div class="cart-drawer__backdrop" data-cart-close></div>
+        <div class="cart-drawer__panel" role="dialog" aria-modal="true" aria-label="Shopping cart">
+            <div class="cart-drawer__head">
+                <div>
+                    <h3 class="h3">Your Cart</h3>
+                    <p class="small cart-drawer__sub">Hot &amp; fresh items, ready to checkout.</p>
+                </div>
+                <button class="icon-btn" type="button" data-cart-close aria-label="Close cart">
+                    <span class="icon-btn__icon" aria-hidden="true">✕</span>
+                </button>
+            </div>
+
+            <div class="cart-drawer__body" data-cart-body>
+                <div class="empty-state" data-cart-empty>
+                    <div class="empty-state__icon" aria-hidden="true">🧡</div>
+                    <p class="empty-state__title">Your cart is empty</p>
+                    <p class="empty-state__text">Add a pizza from the menu to get started.</p>
+                    <a class="btn btn--primary btn--sm" href="#menu" data-cart-empty-link>Browse Menu</a>
+                </div>
+
+                <div class="cart-items" data-cart-items></div>
+            </div>
+
+            <div class="cart-drawer__foot">
+                <div class="totals">
+                    <div class="totals-row">
+                        <span>Subtotal</span>
+                        <span data-cart-subtotal>$0.00</span>
+                    </div>
+                    <div class="totals-row totals-row--muted">
+                        <span>Delivery</span>
+                        <span data-cart-delivery>$0.00</span>
+                    </div>
+                    <div class="totals-row totals-row--total">
+                        <span>Total</span>
+                        <span data-cart-total>$0.00</span>
+                    </div>
+                </div>
+
+                <button class="btn btn--primary btn--full" type="button" data-cart-checkout>
+                    Checkout
+                </button>
+                <p class="small cart-drawer__fineprint">
+                    Demo checkout only. Your order won’t be sent anywhere.
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
